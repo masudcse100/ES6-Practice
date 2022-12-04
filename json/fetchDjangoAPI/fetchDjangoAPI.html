@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Fetch API From Django</h1>
+<h2>The fetch() Method</h2>
+<p id="demo">Fetch a file</p>
+<h2>Live Server work</h2><hr>
+<ul id="stds-container"> <h2>Students List</h2><hr>
+
+</ul>
+<script>
+fetch('http://localhost:8000/students/')
+.then(response => response.json()) // converts the response to JSON
+.then(data => {
+  console.log(data);
+});
+</script>
+
+
+<script src="fetchDjangoAPI.js" charset="utf-8"></script>
+
+</body>
+</html>

@@ -17,12 +17,12 @@ const person = {
 const complexObject = {
   name: 'abc',
   info:{
-    address: 'Dhaka',
-    leader: 'Tiger'
+    city: 'Dhaka',
+    salary: '25000'
   }
 }
-const {leader} = complexObject.info;
-console.log(leader);
+const {salary} = complexObject.info;
+console.log(salary);
 // -------------------------------------------------------
 
 // Array destructure
@@ -30,5 +30,9 @@ const friends = ['Sakib', 'Musfiq','Tamim', 'Bijoy', 'Mehedi']
 
 // const [richFrnd,poorFrnd] = friends;
 // console.log(richFrnd,poorFrnd);
+const [...allfriend] = friends;
+console.log(typeof(allfriend));
+console.log("All Friends ==> " + allfriend);
+
 const [richFrnd,poorFrnd, ...restFrnd] = friends;
 console.log(restFrnd);

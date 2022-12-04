@@ -4,7 +4,6 @@ class Parent{
   }
 }
 
-
 class Child extends Parent{
   constructor(name){
     super();
