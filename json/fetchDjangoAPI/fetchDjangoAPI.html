@@ -6,19 +6,38 @@
 <h2>The fetch() Method</h2>
 <p id="demo">Fetch a file</p>
 <h2>Live Server work</h2><hr>
+<p>
+  <p><input type="text" id="stdName" placeholder="Student name" required></p>
+  <p><input type="text" id="stdClass" placeholder="Student class" required></p>
+  <p><input type="text" id="stdRoll" placeholder="Roll" required></p>
+  <p><input type="text" id="stdCity" placeholder="City" required></p>
+  <button type="button" id="submitBtn"> Save</button>
+</p>
 <ul id="stds-container"> <h2>Students List</h2><hr>
 
 </ul>
 <script>
 fetch('http://localhost:8000/students/')
 .then(response => response.json()) // converts the response to JSON
-.then(data => {
-  console.log(data);
-});
+.then(data => displayUser(data))
+  // console.log(data);
+  function displayUser(students){
+    // console.log("Students ",students);
+    const stdNames = students.map(student => student.name);
+    const ul = document.getElementById('stds-container');
+    for (let i=0; i < stdNames.length; i++){
+      const student = stdNames[i];
+      const li = document.createElement("li");
+      li.innerText = student;
+      ul.appendChild(li);
+      }
+    }
+
 </script>
 
 
-<script src="fetchDjangoAPI.js" charset="utf-8"></script>
+<!-- <script src="GetfetchDjangoAPI.js" charset="utf-8"></script> -->
+<script src="fetchWitForm.js" charset="utf-8"></script>
 
 </body>
 </html>
