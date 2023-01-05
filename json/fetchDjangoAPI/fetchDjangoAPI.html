@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
 <body>
 
@@ -17,10 +17,10 @@
 
 </ul>
 <script>
-fetch('http://localhost:8000/students/')
+fetch('http://localhost:8000/students')
 .then(response => response.json()) // converts the response to JSON
 .then(data => displayUser(data))
-  // console.log(data);
+   //console.log(data);
   function displayUser(students){
     // console.log("Students ",students);
     const stdNames = students.map(student => student.name);
@@ -36,7 +36,7 @@ fetch('http://localhost:8000/students/')
 </script>
 
 
-<!-- <script src="GetfetchDjangoAPI.js" charset="utf-8"></script> -->
+<!--<script src="GetfetchDjangoAPI.js" charset="utf-8"></script> -->
 <script src="fetchWitForm.js" charset="utf-8"></script>
 
 </body>

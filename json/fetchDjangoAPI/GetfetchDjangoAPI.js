@@ -8,6 +8,7 @@ fetch('http://localhost:8000/students/',{
 })
 .then(response => response.json()) // converts the response to JSON
 .then(data => console.log(data))
+
   // console.log(data);
   function displayUser(students){
     // console.log("Students ",students);
